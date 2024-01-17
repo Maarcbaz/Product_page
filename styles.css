@@ -1,0 +1,96 @@
+/* VARIABLES  */
+:root {
+    --BLACK: hsl(0, 0%, 0%);
+    --WHITE: hsl(0, 0%, 100%);
+    --MODERATE-CYAN: hsl(176, 50%, 47%);
+    --DARK-GRAY: hsl(0, 0%, 48%);
+    --DARK-CYAN: hsl(176, 72%, 28%);
+
+    /* --Family: [Commissioner](https: //fonts.google.com/specimen/Commissioner);
+            --Weights: 400, 500, 700 */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+/* HEADER / NAV  */
+nav {
+    width: min(100% - 9vw, 1128px);
+    margin-inline: auto;
+
+}
+
+.topnav,
+.overlay {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topnav_links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.topnav_links a,
+.overlay_content a {
+    text-transform: capitalize;
+    color: var(--WHITE);
+}
+
+.overlay {
+    display: none;
+}
+
+header {
+    background-image: url(./images/image-hero-desktop.jpg);
+    background-size: cover;
+    height: 30vw;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+@media screen and (max-width: 560px) {
+    header {
+        background-image: url(./images/image-hero-mobile.jpg);
+        height: 50vw;
+    }
+
+    .topnav {
+        display: none;
+    }
+
+    .overlay {
+        display: flex;
+    }
+
+    .overlay_content {
+        background-color: var(--WHITE);
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5%;
+        width: 270px;
+        padding: 5px 10px;
+    }
+
+    .overlay_content a {
+        padding-block: 7px;
+        color: var(--BLACK);
+    }
+}
