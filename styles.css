@@ -74,6 +74,7 @@ header {
 
 /* BODY MAIN CONTENT  */
 main {
+    margin-bottom: 2rem;
     background-color: var(--VERY-LIGHT-GRAY);
 }
 
@@ -184,7 +185,6 @@ button {
 
 /* POP UP MESSAGE 1  */
 .overlayPopMenu {
-    /* background-color: rgba(140, 140, 140, 0.185); */
     background-color: var(--DARK-GRAY);
     opacity: .3;
     width: 100%;
@@ -225,6 +225,149 @@ button {
     color: var(--DARK-GRAY);
     text-align: center;
 }
+
+/* POPUP PRODUCT  */
+.close {
+    position: absolute;
+    top: 15px;
+    cursor: pointer;
+
+}
+
+.overlay_popup {
+    position: fixed;
+    background-color: var(--DARK-GRAY);
+    opacity: .3;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.popContent_project {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    background-color: var(--WHITE);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 20px;
+    z-index: 6;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 10;
+    transition: .3s all ease-in;
+}
+
+
+.clicked {
+    border: 1px solid var(--DARK-CYAN);
+}
+
+
+
+.popupRewards {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.popupReward {
+    border: 1px solid var(--LIGHT-GRAY);
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.round_border {
+    border: 1px solid var(--DARK-GRAY);
+    border-radius: 50%;
+    width: 30px;
+    height: 15px;
+    position: relative;
+}
+
+.round_border_inner {
+    width: 8px;
+    height: 8px;
+    background-color: var(--DARK-CYAN);
+    border-radius: 50%;
+    position: absolute;
+    top: 2.2px;
+    right: 3px;
+}
+
+.popContent_project p {
+    color: var(--DARK-GRAY);
+    padding-top: 12px;
+}
+
+.reward_text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount {
+    padding-left: 4px;
+    color: var(--DARK-GRAY);
+}
+
+.reward_text_span {
+    padding-left: 7px;
+    color: var(--DARK-CYAN);
+}
+
+.pledge_section {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+
+.pledge_input button {
+    margin-left: 10px;
+}
+
+.input_field {
+    max-width: 35%;
+    width: 100%;
+    border: 1px solid var(--BLACK);
+    padding: 10px 20px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.dollar {
+    color: var(--DARK-CYAN);
+    padding-inline: 3px;
+}
+
+.increase,
+.decrease {
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+
+.popmenu_project.active_popup_project .popContent_project {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popmenu_project.active_popup_project .overlay_popup {
+    display: block;
+}
+
+
+/* END  */
 
 .btn {
     background-color: var(--DARK-CYAN);
@@ -293,6 +436,7 @@ button {
 /* THIRD SECTION  */
 .third_section_Content {
     margin-top: 2rem;
+    background-color: var(--WHITE);
     padding: 20px 15px;
 }
 
@@ -310,7 +454,7 @@ button {
 .reward {
     border-radius: 8px;
     padding: 10px;
-    border: 1px solid var(--DARK-GRAY);
+    border: 1px solid var(--LIGHT-GRAY);
 }
 
 .reward_type {
@@ -341,6 +485,38 @@ button {
 
 .reward:nth-child(3) {
     opacity: .52;
+}
+
+@media screen and (max-width: 768px) {
+    .popContent_project {
+        max-width: 500px;
+        width: 100%;
+        top: 32rem;
+    }
+
+    .round_border {
+        width: 30px;
+        height: 13px;
+        position: relative;
+    }
+
+    .round_border_inner {
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+
+    .pledge_section {
+        display: block;
+    }
+
+    .pledge_input {
+
+        float: right;
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -413,6 +589,32 @@ button {
         border-right: none;
         border-bottom: 1px solid var(--DARK-GRAY);
     }
+
+    .round_border {
+        width: 28px;
+        height: 9px;
+        position: relative;
+    }
+
+    .round_border_inner {
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        top: 2px;
+        right: 1.8px;
+    }
+
+    .reward_Left {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        padding-bottom: 6px;
+    }
+
+    hr {
+        margin-top: 1rem;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -435,9 +637,56 @@ button {
     .reward_type {
         flex-direction: column;
     }
+
+    .popContent_project {
+        max-width: 500px;
+        width: 100%;
+        top: 40rem;
+    }
+
+    .input_field {
+        max-width: 100px;
+        padding-inline: 3px 7px;
+        width: 70%;
+    }
+
 }
 
-@media screen and (max-width: 420px) {}
+@media screen and (max-width: 420px) {
+    .round_border {
+        width: 24px;
+        height: 8px;
+        position: relative;
+    }
+
+    .round_border_inner {
+        width: 3px;
+        height: 3px;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+    }
+
+    .reward_Left {
+        bottom: 100px;
+    }
+
+    .input_field {
+        padding-inline: 2px 6px;
+    }
+
+    .pledge_input button {
+        margin-left: 7px;
+    }
+
+    .decrease {
+        padding: 4px;
+    }
+
+    .increase {
+        padding: 2px;
+    }
+}
 
 @media screen and (max-width: 375px) {
     .bookmark>button {
@@ -464,5 +713,105 @@ button {
         justify-content: start;
         align-items: start;
         flex-direction: column;
+    }
+
+    .popContent_project {
+        max-width: 500px;
+        width: 100%;
+        top: 47rem;
+    }
+
+    .round_border {
+        width: 22px;
+        height: 7px;
+        position: relative;
+    }
+
+    .round_border_inner {
+        width: 2.5px;
+        height: 2.5px;
+        position: absolute;
+        top: 1.2px;
+        right: 1px;
+    }
+
+    .btnCon {
+        margin-top: 1rem;
+    }
+
+
+    .reward_Left {
+        bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .popContent_project {
+        max-width: 500px;
+        width: 100%;
+        top: 50rem;
+    }
+
+    .round_border {
+        width: 22px;
+        height: 7px;
+        position: relative;
+    }
+
+    .round_border_inner {
+        width: 2.2px;
+        height: 2.2px;
+        position: absolute;
+        top: 1.1px;
+        right: 1px;
+    }
+
+    .reward_Left {
+        bottom: 117px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .popContent_project {
+        max-width: 500px;
+        width: 100%;
+        top: 59rem;
+    }
+
+    .round_border {
+        width: 22px;
+        height: 7px;
+        position: relative;
+    }
+
+    .round_border_inner {
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        top: 1.2px;
+        right: 1px;
+    }
+
+    .reward_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popupReward_content p {
+        margin-bottom: 1rem;
+    }
+
+    .reward_Left {
+        position: absolute;
+        bottom: 150px;
+        left: 30px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .popContent_project {
+        max-width: 500px;
+        width: 100%;
+        top: 64rem;
     }
 }
