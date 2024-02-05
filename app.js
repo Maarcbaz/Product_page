@@ -40,7 +40,7 @@ inPuts.forEach(input => {
     input
     // inPuts.style.color = "var(--BLACK)"
     increases.forEach(increase => {
-       increase.addEventListener("click", () => {
+        increase.addEventListener("click", () => {
             input.innerHTML++
         })
     })
@@ -48,7 +48,7 @@ inPuts.forEach(input => {
         decrease.addEventListener("click", () => {
             input.innerHTML--
         })
-    
+
     })
 })
 // GETTING EACH MAIN ELEMENT 
@@ -81,9 +81,12 @@ popupRewards.forEach(popupReward => {
 let btns = document.querySelectorAll(".btnS")
 btns.forEach(btn => {
     btn.addEventListener("click", () => {
-        alert("Thanks for supporting our project")
+        btn === null
     })
 });
+let bacups = document.getElementById("back").addEventListener("click", () => {
+    alert("Thanks 👍 for backing up this project.")
+})
 
 let btnO = document.querySelector(".btnO").addEventListener("click", () => {
     alert("This produt is no more available")

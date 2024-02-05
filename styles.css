@@ -248,7 +248,7 @@ button {
 
 .popContent_project {
     position: absolute;
-    top: 350px;
+    top: 155rem;
     left: 50%;
     background-color: var(--WHITE);
     display: flex;
@@ -491,7 +491,7 @@ button {
     .popContent_project {
         max-width: 500px;
         width: 100%;
-        top: 32rem;
+        top: 89rem;
     }
 
     .round_border {
@@ -641,7 +641,7 @@ button {
     .popContent_project {
         max-width: 500px;
         width: 100%;
-        top: 40rem;
+        top: 130rem;
     }
 
     .input_field {
@@ -718,7 +718,7 @@ button {
     .popContent_project {
         max-width: 500px;
         width: 100%;
-        top: 47rem;
+        top: 138rem;
     }
 
     .round_border {
@@ -749,7 +749,7 @@ button {
     .popContent_project {
         max-width: 500px;
         width: 100%;
-        top: 50rem;
+        top: 155rem;
     }
 
     .round_border {
@@ -775,7 +775,7 @@ button {
     .popContent_project {
         max-width: 500px;
         width: 100%;
-        top: 59rem;
+        top: 155rem;
     }
 
     .round_border {
@@ -812,6 +812,6 @@ button {
     .popContent_project {
         max-width: 500px;
         width: 100%;
-        top: 64rem;
+        top: 155rem;
     }
 }
