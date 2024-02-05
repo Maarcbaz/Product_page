@@ -248,7 +248,7 @@ button {
 
 .popContent_project {
     position: absolute;
-    top: 155rem;
+    top: 80rem;
     left: 50%;
     background-color: var(--WHITE);
     display: flex;
